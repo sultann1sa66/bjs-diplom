@@ -3,11 +3,23 @@
 const userForm = new UserForm();
 userForm.loginFormCallback = data => {
     ApiConnector.login(data, (response) => {
-        if(response) {
-        return result;
+        console.log(response);
+        if(response.success){
+            location.reload();
+        } else {
+            setLoginErrorMessage(message);
         }
-        if()
-});
+    });
+}
+userForm.registerFormCallback = data => {
+    ApiConnector.register(data, (response) => {
+        console.log(response);
+        if(response.success){
+            location.reload();
+        } else{
+            setRegisterErrorMessage(message);
+        }
+    });
 }
 
     
