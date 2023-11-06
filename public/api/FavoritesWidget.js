@@ -47,7 +47,6 @@ class FavoritesWidget {
     const name = this.addUserToFavoritesForm.querySelector("[placeholder='Имя']").value;
     return { id, name };
   }
-
   setMessage(isSuccess, message) {
     if (isSuccess) {
       this.favoritesMessageBox.className = 'ui message fluid success';
